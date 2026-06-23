@@ -1,4 +1,5 @@
 const Notification = require("../models/Notification");
+const sendSMS = require("./smsService");
 
 const sendEmail = require("./emailService");
 
@@ -22,6 +23,7 @@ const sendWelcomeEmail = async (user) => {
         <p>Your account has been created successfully.</p>
       `,
     });
+    await sendSMS(user._id, user.phone, "Welcome to platform");
 
     notification.status = "SENT";
 
