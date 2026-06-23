@@ -1,2 +1,8 @@
 *.env
 node_modules
+
+# Firebase
+serviceAccountKey.json
+
+# Or specific path
+src/config/firebase/serviceAccountKey.json
