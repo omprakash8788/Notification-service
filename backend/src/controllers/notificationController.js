@@ -19,3 +19,7 @@ const getNotifications = async (req, res) => {
 module.exports = {
   getNotifications,
 };
+
+// module.exports = {
+//   getNotifications,
+// };
