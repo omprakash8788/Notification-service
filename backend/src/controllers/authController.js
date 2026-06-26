@@ -5,7 +5,7 @@ const { sendWelcomeEmail } = require("../services/notificationService");
 
 const registerUser = async (req, res) => {
   try {
-    const { name, email, password } = req.body;
+    const { name, email, password, phone,  fcmToken } = req.body;
 
     const existingUser = await User.findOne({ email });
 
@@ -20,6 +20,8 @@ const registerUser = async (req, res) => {
     const user = await User.create({
       name,
       email,
+      phone,
+       fcmToken,
       password: hashedPassword,
     });
     await sendWelcomeEmail(user);
