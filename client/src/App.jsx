@@ -1,6 +1,9 @@
 import { getToken } from "firebase/messaging";
 import { messaging } from "./firebase";
 
+// import { getToken } from "firebase/messaging";
+// import { messaging } from "./firebase";
+
 function App() {
 
   const getFCMToken = async () => {
